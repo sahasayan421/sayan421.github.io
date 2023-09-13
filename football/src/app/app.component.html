@@ -1,0 +1,54 @@
+<div class="container">
+  <div *ngIf="!router.url.includes('results')">
+    <h2>FOOTBALL UPDATES</h2>
+    <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
+      <button
+        id="englandSelect"
+        class="w-100 nav-item nav-link"
+        routerLink="/england/39"
+        routerLinkActive="active"
+        style="flex: 1"
+      >
+        England
+      </button>
+      <!-- TAB2 -->
+      <button
+        id="spainSelect"
+        class="w-100 nav-item nav-link"
+        routerLink="/spain/140"
+        routerLinkActive="active"
+        style="flex: 1"
+      >
+        Spain
+      </button>
+      <button
+        id="germanySelect"
+        class="w-100 nav-item nav-link"
+        routerLink="/germany/78"
+        routerLinkActive="active"
+        style="flex: 1"
+      >
+        Germany
+      </button>
+      <button
+        id="franceSelect"
+        class="w-100 nav-item nav-link"
+        routerLink="/france/61"
+        routerLinkActive="active"
+        style="flex: 1"
+      >
+        France
+      </button>
+      <button
+        id="italySelect"
+        class="w-100 nav-item nav-link"
+        routerLink="/italy/135"
+        routerLinkActive="active"
+        style="flex: 1"
+      >
+        Italy
+      </button>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

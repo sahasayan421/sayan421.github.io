@@ -1,0 +1,26 @@
+<table class="table table-border">
+  <thead>
+  <th></th>
+  <th></th>
+  <th>Name</th>
+  <th>Games</th>
+  <th>W</th>
+  <th>L</th>
+  <th>D</th>
+  <th>Goal Difference</th>
+  <th>Points</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of standings; let i = index">
+      <td>{{i+1}}</td>
+      <td><img class="team_logo" [src]="item.team.logo" alt=""/></td>
+      <td (click)="goToResults(item)">{{item.team.name}}</td>
+      <td>{{item.all.played}}</td>
+      <td>{{item.all.win}}</td>
+      <td>{{item.all.lose}}</td>
+      <td>{{item.all.draw}}</td>
+      <td>{{item.goalsDiff}}</td>
+      <td>{{item.points}}</td>
+    </tr>
+  </tbody>
+</table>

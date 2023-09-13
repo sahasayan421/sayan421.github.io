@@ -1,0 +1,15 @@
+
+<div>
+    <div *ngFor="let item of teams">
+        <span><img class="team_logo" [src]="item.teams.home.logo" alt=""></span>
+        <span>{{item.teams.home.name}}</span>
+        <span>{{item.goals.home}}</span>
+        <span> - </span>
+        <span>{{item.goals.away}}</span>
+        <span>{{item.teams.away.name}}</span>
+        <span><img class="team_logo" [src]="item.teams.away.logo" alt=""></span>
+    </div>
+</div>
+
+<br>
+<button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
