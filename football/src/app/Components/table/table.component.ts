@@ -15,7 +15,8 @@ export class TableComponent implements OnInit {
     this.leagueId = this.route.snapshot.params['id'];
   }
   ngOnInit() {
-    this.footBallService.getStandings(this.leagueId,'2023').subscribe((data) => {
+  const year  = new Date().getFullYear();
+    this.footBallService.getStandings(this.leagueId,JSON.stringify(year)).subscribe((data) => {
       this.standings = data.response[0].league.standings[0];
     })
   }
